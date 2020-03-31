@@ -28,7 +28,7 @@ public class KeySender {
 
 	private Robot robot;
 
-	private String[] initStrings = { "sudo minikube start --vm-driver=none", "sudo kubectl get pods",
+	private String[] initStrings = { "Disposable\tTrue\tEncrypted\tTanium ok\tOwner\tStephan.cossette\tShutdownOrder\t1\tShutdownTag\tEnabled\tWBS\tasset_onshore", "sudo minikube start --vm-driver=none", "sudo kubectl get pods",
 			"sudo kubectl get services -w", "sudo make stop-container", "make build", "make docker-image",
 			"sudo make run-container", "git config --global user.name \"Stephan Cossette\"",
 			"git config --global user.email \"stephan.cossette@accenture.com\"", "", "", "", "", "", "" };
@@ -121,7 +121,7 @@ public class KeySender {
 			gbc_btnX.gridx = 1;
 			gbc_btnX.gridy = i;
 
-			SpecialJButton btnX = new SpecialJButton("X", textField);
+			final SpecialJButton btnX = new SpecialJButton("X", textField);
 
 			btnX.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
