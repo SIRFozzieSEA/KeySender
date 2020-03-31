@@ -17,7 +17,7 @@ import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.border.EmptyBorder;
 
-import com.codef.codesnippets.CodefRobot;
+import com.codef.xsalt.utils.XSaLTRobot;
 
 public class KeySender {
 
@@ -28,9 +28,11 @@ public class KeySender {
 
 	private Robot robot;
 
-	private String[] initStrings = { "Disposable\tTrue\tEncrypted\tTanium ok\tOwner\tStephan.cossette\tShutdownOrder\t1\tShutdownTag\tEnabled\tWBS\tasset_onshore", "sudo minikube start --vm-driver=none", "sudo kubectl get pods",
-			"sudo kubectl get services -w", "sudo make stop-container", "make build", "make docker-image",
-			"sudo make run-container", "git config --global user.name \"Stephan Cossette\"",
+	private String[] initStrings = {
+			"Disposable\tTrue\tEncrypted\tTanium ok\tOwner\tStephan.cossette\tShutdownOrder\t1\tShutdownTag\tEnabled\tWBS\tasset_onshore",
+			"sudo minikube start --vm-driver=none", "sudo kubectl get pods", "sudo kubectl get services -w",
+			"sudo make stop-container", "make build", "make docker-image", "sudo make run-container",
+			"git config --global user.name \"Stephan Cossette\"",
 			"git config --global user.email \"stephan.cossette@accenture.com\"", "", "", "", "", "", "" };
 
 	/**
@@ -127,7 +129,7 @@ public class KeySender {
 				public void actionPerformed(ActionEvent e) {
 					System.out.println(btnX.getjTextFieldText());
 
-					CodefRobot.getKeyPressKeysForString(robot, initialPauseMs, btnX.getjTextFieldText(), 20);
+					XSaLTRobot.getKeyPressKeysForString(robot, initialPauseMs, btnX.getjTextFieldText(), 20);
 
 				}
 			});
